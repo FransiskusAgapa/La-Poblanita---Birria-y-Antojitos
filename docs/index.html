@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>La Poblanita - Birria y Antojitos</title>
+        <link rel="icon" href="/docs/logo.ico" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="/docs/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+    </head>
+    <body class="bg-white text-neutral-900 font-sans">
+        <!-- Navigation -->
+        <header class="sticky top-0 bg-orange-500 shadow z-50">
+        <nav class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <img src="/docs/logo.png" alt="La Poblanita" class="h-12 sm:h-14" />
+            <ul class="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-white">
+            <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+            <li><a href="#menu" class="hover:text-yellow-300">Menu</a></li>
+            <li><a href="#specials" class="hover:text-yellow-300">Specials</a></li>
+            <li><a href="#catering" class="hover:text-yellow-300">Catering</a></li>
+            <li><a href="#location" class="hover:text-yellow-300">Location</a></li>
+            <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="scroll-mt-24 py-12 px-4 sm:px-6 lg:px-8 bg-orange-100 text-center">
+        <div class="max-w-screen-lg mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-red-600">Authentic Mexican Street Food</h2>
+            <p class="text-base sm:text-lg mb-8">Birria, Antojitos, and Tradition — Served Hot and Fresh!</p>
+            <div class="relative max-w-3xl mx-auto">
+            <img id="slider-image" src="menu/food1.jpg" alt="Food" class="rounded shadow-lg w-full h-64 sm:h-72 md:h-80 object-cover transition-opacity duration-700" />
+            </div>
+        </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="scroll-mt-24 py-12 px-4 sm:px-6 lg:px-8 bg-white text-center">
+        <div class="max-w-screen-xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-red-600">Our Menu</h2>
+            <p class="mb-6 text-gray-600">Explore our full selection of burritos, birria specials, tacos, burgers, and more!</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8" id="menu-items"></div>
+        </div>
+        </section>
+
+        <!-- Floating Cart Button -->
+        <div id="cart-button" class="fixed bottom-6 right-6 bg-red-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-700 cursor-pointer z-50">
+            🛒 View Cart (<span id="cart-count">0</span>)
+        </div>
+
+        <!-- Cart Panel -->
+        <div id="cart-panel" class="transition-all duration-300 transform translate-y-full md:translate-x-full fixed bottom-0 right-0 bg-white w-full sm:w-3/4 md:w-1/2 lg:w-1/3 h-1/2 md:h-full shadow-lg p-6 overflow-y-auto z-50 border-t md:border-l border-gray-200 hidden">
+            <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold text-red-600">My Food Cart</h3>
+            <button id="close-cart" class="text-gray-500 hover:text-red-500 text-2xl leading-none font-bold">×</button>
+            </div>
+            <div id="cart-items" class="space-y-4"></div>
+            <div class="mt-4">
+            <p class="text-lg font-semibold">Total: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-btn" class="mt-4 bg-red-600 text-white px-4 py-2 rounded w-full disabled:opacity-50 disabled:cursor-not-allowed">
+                You have no order yet
+            </button>
+            </div>
+        </div>
+
+        <!-- Specials Section -->
+        <section id="specials" class="scroll-mt-24 py-12 bg-yellow-100 text-center">
+        <h2 class="text-3xl font-bold mb-2 text-red-600">🔥 Taco Tuesday Specials</h2>
+        <p class="text-lg text-gray-800">Every Tuesday from 4 PM – 6 PM</p>
+        <p class="text-xl font-semibold text-orange-700">$2 Street Tacos • $3 Birria Tacos</p>
+        </section>
+
+        <!-- Catering Section -->
+        <section id="catering" class="scroll-mt-24 py-12 bg-orange-50 text-center">
+        <h2 class="text-3xl font-bold text-red-600 mb-4">We Cater!</h2>
+        <p class="text-base max-w-xl mx-auto mb-4">From big events and company lunches to small gatherings and private parties, we've got you covered. Call or email us to reserve your day and enjoy delicious birria y antojitos.</p>
+        <p class="font-semibold">Call: (310) 882-0756 • Email: blapoblanita@gmail.com</p>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="scroll-mt-24 relative py-16 bg-cover bg-center text-white" style="background-image: url('images/truck.jpg');">
+            <div class="absolute inset-0 bg-red-800 bg-opacity-70"></div>
+            <div class="relative z-10 max-w-screen-md mx-auto text-center px-4">
+                <h2 class="text-4xl font-bold mb-4 text-yellow-300">📍 Find Us Here</h2>
+                <p class="text-lg font-medium">11550 Santa Monica Blvd, Los Angeles, CA 90025</p>
+                <p class="text-base">Open Mon–Sat, 9:30 AM – 7:20 PM</p>
+                <a href="https://goo.gl/maps/DNKMjaWJrZcJeV3YA" target="_blank" class="inline-block mt-4 bg-yellow-300 text-red-800 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                    Get Directions
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="scroll-mt-24 py-12 px-4 sm:px-6 lg:px-8 bg-orange-50 text-center">
+        <h2 class="text-3xl font-bold mb-4 text-red-600">Contact Us</h2>
+        <p class="mb-2">📞 Phone: (310) 882-0756</p>
+        <p class="mb-2">✉️ Email: blapoblanita@gmail.com</p>
+        <p>🌐 Website: <a href="https://www.bing.com/maps?&mepi=23~~TopOfPage~LargeMapLink&ty=18&q=11550%20Santa%20Monica%20Blvd,%20West%20Los%20Angeles,%20CA%2090025&ppois=34.044843_-118.452879_11550%20Santa%20Monica%20Blvd,%20West%20Los%20Angeles,%20CA%2090025_~&cp=34.044843~-118.452879&v=2&sV=1&FORM=MIRE&qpvt=11550+Santa+Monica+Blvd,+Los+Angeles,+CA+90025" class="text-red-600 underline hover:text-red-800">lapoblanitabirriayantojitos.com</a></p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-4 bg-orange-500 text-sm text-white">
+        &copy; 2025 La Poblanita. All rights reserved. | <a href="https://www.lapoblanitabirriayantojitos.com/order" target="_blank" class="underline">Order Now</a>
+        </footer>
+
+        <script src="/docs/cart.js"></script>
+        <script src="/docs/script.js"></script>
+    </body>
+</html>
+
+<!--
+# QA
+- What do you think of the theme ?
+- Do you want me to implement the order ?
+- You have link to reserve, How did you do update your menu availability?
+- Do you want to have your own app to track order?
+- Do you want me to maintain the website? (i'll send an email on the pricing)
+-->
