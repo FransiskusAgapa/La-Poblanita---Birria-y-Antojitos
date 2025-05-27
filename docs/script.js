@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Homepage slider logic ===
     const sliderImages = [
-    '/docs/previews/preview1.jpg',
-    '/docs/previews/preview2.jpg',
-    '/docs/previews/preview3.jpg',
-    '/docs/previews/preview4.jpg',
-    '/docs/previews/preview5.jpg'
+        '/docs/previews/preview1.jpg',
+        '/docs/previews/preview2.jpg',
+        '/docs/previews/preview3.jpg',
+        '/docs/previews/preview4.jpg',
+        '/docs/previews/preview5.jpg'
     ];
 
     let currentSlide = 0;
